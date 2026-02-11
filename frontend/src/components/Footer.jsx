@@ -19,12 +19,7 @@ const Footer = () => {
           <div className="footer-members">
             <h3>SunTrackers Team</h3>
             <ul>
-              <li>Febian Nurwanto</li>
-              <li>Shraddha Gajanan Desai</li>
-              <li>Harsh Hublikar</li>
-              <li>Isha Samanat</li>
-              <li>Kim Seulkichan</li>
-              <li>Kishore K</li>
+               Power West Java Made by Suntrackers
             </ul>
           </div>
 
@@ -51,14 +46,14 @@ const Footer = () => {
         .footer {
           background: linear-gradient(135deg, #0f172a, #064e3b);
           color: #ffffff;
-          padding: 60px 10% 20px 10%;
-          margin-top: 80px;
+          padding: 40px 10% 20px 10%;
+          margin-top: 60px;
         }
 
         .footer-container {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 40px;
+          gap: 30px;
         }
 
         .footer h2 {
@@ -68,7 +63,7 @@ const Footer = () => {
         }
 
         .footer h3 {
-          margin-bottom: 15px;
+       
           font-size: 18px;
           color: #f1f5f9;
         }
@@ -103,9 +98,8 @@ const Footer = () => {
         }
 
         .footer-bottom {
-          text-align: center;
-          margin-top: 40px;
-          padding-top: 20px;
+         
+          
           border-top: 1px solid rgba(255,255,255,0.1);
           font-size: 13px;
           color: #94a3b8;
