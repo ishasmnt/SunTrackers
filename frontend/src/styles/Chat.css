@@ -1,0 +1,664 @@
+.chatShell{
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px 14px;
+  background: #f4f6f5;
+}
+
+.chatCard{
+  width: min(980px, 100%);
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.10);
+  overflow: hidden;
+}
+
+.chatTop{
+  padding: 26px 26px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.chatTopIcon{
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: #2e7d32;
+  color: #fff;
+  box-shadow: 0 10px 18px rgba(46,125,50,0.22);
+}
+
+.chatTopIcon i{ font-size: 1.4rem; }
+
+.chatTopText{ display: grid; gap: 4px; }
+
+.chatTitle{
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #1b1f1b;
+}
+
+.chatSub{
+  font-size: 0.95rem;
+  color: rgba(27,31,27,0.65);
+}
+
+.chatDivider{
+  height: 1px;
+  background: rgba(0,0,0,0.06);
+}
+
+.chatBody{
+  padding: 18px 18px 18px;
+}
+
+/* Hint + chips */
+.hintRow{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.hintBubble{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #f3f7f3;
+  border: 1px solid rgba(46,125,50,0.16);
+  color: rgba(27,31,27,0.78);
+  font-size: 0.92rem;
+}
+
+.hintBubble i{ color: #2e7d32; font-size: 1.05rem; }
+
+.chipRow{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 14px;
+}
+
+.chip{
+  border: 1px solid rgba(46,125,50,0.22);
+  background: rgba(46,125,50,0.06);
+  color: #1f5f2a;
+  padding: 10px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.86rem;
+}
+
+/* Chat box */
+.chatBox{
+  background: #fbfbfb;
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 18px;
+  padding: 16px;
+  height: min(58vh, 560px);
+  overflow-y: auto;
+}
+
+.msgRow{
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.msgRow.ai{ justify-content: flex-start; }
+.msgRow.user{ justify-content: flex-end; }
+
+.avatar{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(46,125,50,0.10);
+  border: 1px solid rgba(46,125,50,0.14);
+  color: #2e7d32;
+}
+
+.avatar i{ font-size: 1rem; }
+
+.avatarUser{
+  background: rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.10);
+  color: rgba(0,0,0,0.55);
+}
+
+.bubble{
+  max-width: min(76%, 640px);
+  padding: 12px 14px;
+  border-radius: 18px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.06);
+  animation: bubbleIn .18s ease-out;
+}
+
+.bubbleAi{
+  background: #fff;
+  color: rgba(27,31,27,0.92);
+  border-radius: 18px 18px 18px 8px;
+}
+
+.bubbleUser{
+  background: #2e7d32;
+  color: #fff;
+  border: 0;
+  border-radius: 18px 18px 8px 18px;
+}
+
+.bubbleWelcome{
+  border-left: 4px solid #2e7d32;
+  padding: 14px 16px;
+}
+
+.msgP{ margin: 0; line-height: 1.55; font-size: 0.95rem; }
+.msgSpacer{ height: 8px; }
+
+.msgList{
+  margin: 6px 0 0 18px;
+  padding: 0;
+}
+
+.msgList li{ margin: 6px 0; line-height: 1.45; font-size: 0.95rem; }
+
+/* Typing */
+.bubbleTyping{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dots{ display: inline-flex; gap: 6px; }
+
+.dots span{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2e7d32;
+  animation: bounce 1.4s infinite ease-in-out;
+}
+
+.dots span:nth-child(2){ animation-delay: 0.2s; }
+.dots span:nth-child(3){ animation-delay: 0.4s; }
+
+.typingText{
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: rgba(27,31,27,0.60);
+}
+
+/* ===== Composer persis gambar ===== */
+/* ===== MOBILE FULL WIDTH ===== */
+@media (max-width: 600px){
+  .chatShell{
+    padding: 0;
+    place-items: stretch;
+  }
+
+  .chatCard{
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .chatBody{
+    padding: 12px;
+  }
+}
+
+/* ===== Composer (grid biar gak geser) ===== */
+.composerCard{
+  margin-top: 14px;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 20px;
+  padding: 12px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.07);
+}
+
+.composerBar{
+  display: grid;
+  grid-template-columns: 1fr 64px; /* field | send */
+  gap: 12px;
+  align-items: center;
+}
+
+.composerField{
+  position: relative;
+  background: #eef1ee;
+  border-radius: 18px;
+  padding: 10px;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+}
+
+.composerTextarea{
+  width: 100%;
+  min-height: 44px;
+  max-height: 110px;
+  resize: none;
+  border: 0;
+  outline: none;
+  background: transparent;
+  padding: 6px 62px 6px 10px; /* space mic */
+  font-size: 1.02rem;
+  font-family: inherit;
+  color: rgba(27,31,27,0.78);
+  line-height: 1.35;
+}
+
+.composerTextarea::placeholder{
+  color: rgba(27,31,27,0.35);
+}
+
+/* Mic: center beneran */
+.composerMic{
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 16px;
+  background: #dfe7db;
+  color: #2e7d32;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.composerMic i{ 
+  font-size: 1.25rem;
+  margin-left: -4.5px;
+}
+
+.composerSend{
+  width: 64px;
+  height: 64px;
+  border: 0;
+  border-radius: 18px;
+  background: #2e7d32; /* AKTIF: ijo jelas */
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 12px 22px rgba(46,125,50,0.22);
+  transition: transform .08s ease, filter .2s ease, opacity .2s ease;
+}
+
+.composerSend i{ font-size: 1.45rem; }
+
+.composerSend:hover{ filter: brightness(0.98); }
+.composerSend:active{ transform: scale(0.99); }
+
+.composerSend:disabled{
+  background: #b7c7b0;
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ===== Info bar kecilin text ===== */
+.infoBar{
+  margin-top: 12px;
+  background: #f3f3f3;
+  border-radius: 18px;
+  padding: 14px 14px;
+  color: rgba(27,31,27,0.55);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.95rem; /* kecilin */
+}
+
+.infoBar i{
+  font-size: 1.15rem;
+  color: rgba(27,31,27,0.55);
+}
+
+/* ===== Responsive composer: gak geser kanan + ukuran pas ===== */
+@media (max-width: 520px){
+  .composerCard{
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .composerBar{
+    grid-template-columns: 1fr 56px;
+    gap: 10px;
+  }
+
+  .composerField{
+    min-height: 64px;
+    padding: 8px;
+    border-radius: 16px;
+  }
+
+  .composerTextarea{
+    font-size: 0.98rem;
+    padding: 6px 56px 6px 8px;
+    max-height: 96px;
+  }
+
+  .composerMic{
+    right: 10px;
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+  }
+
+  .composerSend{
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+  }
+
+  .composerSend i{ font-size: 1.25rem; }
+
+  .infoBar{
+    font-size: 0.86rem;
+    padding: 12px 12px;
+    border-radius: 16px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 720px){
+  .composerCard{ padding: 10px; border-radius: 18px; }
+  .composerBar{ gap: 12px; }
+  .composerField{ min-height: 68px; border-radius: 16px; }
+  .composerTextarea{ font-size: 1rem; padding-right: 62px; }
+  .composerMic{ 
+    width: 44px; 
+    height: 44px; 
+    border-radius: 14px;
+    margin-left: -4.5px;
+  }
+  .composerSend{ width: 58px; height: 58px; border-radius: 16px; }
+  .composerSend i{ font-size: 1.3rem; }
+  .infoBar{ font-size: 1rem; }
+}
+
+@media (max-width: 520px){
+  .chatBody{ padding: 14px; }
+  .chatBox{ padding: 12px; height: 62vh; }
+  .bubble{ max-width: 88%; }
+}
+
+@keyframes bubbleIn{
+  from{ opacity: 0; transform: translateY(6px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce{
+  0%,80%,100%{ transform: scale(0); }
+  40%{ transform: scale(1); }
+}
+
+/* ===== Navigation Link Button ===== */
+.nav-link-button {
+  display: inline-inline;
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 4px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.nav-link-button:hover {
+  background: #1b5e20;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(46, 125, 50, 0.3);
+}
+
+/* ===== Navigation Suggestion Bubble ===== */
+.navSuggestionBubble {
+  border: 1px solid rgba(46, 125, 50, 0.3) !important;
+  background: linear-gradient(135deg, #f0f7f0 0%, #e8f5e9 100%) !important;
+}
+
+.navSuggestion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.navSuggestionText {
+  font-size: 0.92rem;
+  color: rgba(27, 31, 27, 0.85);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navSuggestionText i {
+  color: #2e7d32;
+  font-size: 1.1rem;
+}
+
+.navSuggestionBtn {
+  align-self: flex-start;
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navSuggestionBtn:hover {
+  background: #1b5e20;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.35);
+}
+
+/* ===== Quick Navigation Bar ===== */
+.quickNavBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #f8faf8;
+  border-radius: 12px;
+  border: 1px solid rgba(46, 125, 50, 0.15);
+  margin-bottom: 12px;
+  overflow-x: auto;
+}
+
+.quickNavLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(27, 31, 27, 0.6);
+  white-space: nowrap;
+}
+
+.quickNavButtons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.quickNavBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  color: #2e7d32;
+  border: 1px solid rgba(46, 125, 50, 0.25);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.quickNavBtn i {
+  font-size: 1rem;
+}
+
+.quickNavBtn:hover {
+  background: #2e7d32;
+  color: #fff;
+  border-color: #2e7d32;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(46, 125, 50, 0.2);
+}
+
+.quickNavBtn.requires-auth {
+  position: relative;
+}
+
+.quickNavBtn.requires-auth::after {
+  content: '🔒';
+  font-size: 0.65rem;
+  margin-left: 4px;
+}
+
+/* ===== Authentication Prompt Styles ===== */
+.authPromptBubble {
+  border: 1px solid rgba(220, 53, 69, 0.3) !important;
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%) !important;
+}
+
+.authPrompt {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.authPromptHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #c62828;
+}
+
+.authPromptHeader i {
+  font-size: 1.2rem;
+}
+
+.authPromptText {
+  margin: 0;
+  font-size: 0.92rem;
+  color: rgba(27, 31, 27, 0.85);
+  line-height: 1.5;
+}
+
+.authPromptButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.authPromptLoginBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.authPromptLoginBtn:hover {
+  background: #1b5e20;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.35);
+}
+
+.authPromptCancelBtn {
+  background: #fff;
+  color: #666;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.authPromptCancelBtn:hover {
+  background: #f5f5f5;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Mobile adjustments for auth prompt */
+@media (max-width: 520px) {
+  .authPromptButtons {
+    flex-direction: column;
+  }
+  
+  .authPromptLoginBtn,
+  .authPromptCancelBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Mobile adjustments for quick nav */
+@media (max-width: 520px) {
+  .quickNavBar {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+  
+  .quickNavLabel {
+    font-size: 0.8rem;
+  }
+  
+  .quickNavBtn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .quickNavBtn span {
+    display: none;
+  }
+  
+  .quickNavBtn::after {
+    content: attr(title);
+    display: none;
+  }
+}

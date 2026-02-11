@@ -1,0 +1,157 @@
+.analysisPage {
+  width: 100%;
+  max-width: 1200px;
+  margin: 28px auto 48px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.analysisHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.analysisTitleWrap h1 {
+  margin: 0;
+  color: #2e7d32;
+  font-weight: 900;
+  font-size: clamp(32px, 6vw, 42px);
+  letter-spacing: -0.4px;
+}
+
+.analysisTitleWrap p {
+  margin: 4px 0 0;
+  color: #666;
+  width: 700px;
+}
+
+.analysisActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.analysisShareBtn {
+  padding: 10px 14px;
+  /* background: linear-gradient(135deg, #25d366, #16a34a); */
+  background-color: #25d366;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 22px rgba(22, 163, 74, 0.22);
+  transition: transform 0.08s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysisShareBtn:hover {
+  filter: brightness(0.98);
+  box-shadow: 0 12px 28px rgba(22, 163, 74, 0.28);
+}
+
+.analysisShareBtn:active {
+  transform: scale(0.99);
+}
+
+.analysisToggle {
+  background: #e0e0e0;
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+  gap: 5px;
+}
+
+.analysisToggleBtn {
+  padding: 8px 14px;
+  border: none !important;
+  border-color: transparent !important;
+  border-radius: 10px;
+  background: transparent;
+  color: #556055;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analysisToggleBtn:hover {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.analysisToggleBtnActive {
+  background: #fff;
+  color: #2e7d32;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.analysisCard {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+  min-height: 500px;
+}
+
+.analysisCard img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.analysisMeta {
+  margin-top: 14px;
+  padding: 12px 14px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border-left: 5px solid #2e7d32;
+  color: #555;
+}
+
+.analysisMeta strong {
+  color: #2e7d32;
+}
+
+@media (max-width: 768px) {
+  .analysisPage {
+    margin: 18px auto 32px;
+    padding: 0 12px;
+  }
+
+  .analysisActions {
+    justify-content: flex-start;
+  }
+
+  .analysisCard {
+    min-height: 360px;
+  }
+
+  .analysisShareBtn,
+  .analysisToggleBtn {
+    padding: 9px 12px;
+    border-radius: 12px;
+  }
+  .analysisTitleWrap p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .analysisToggle {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .analysisToggleBtn {
+    flex: 1;
+    text-align: center;
+  }
+}

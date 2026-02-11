@@ -1,0 +1,165 @@
+.article-detail {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.article-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.article-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.article-body {
+  display: grid;
+  grid-template-columns: 3fr 1.2fr;
+  gap: 48px;
+}
+
+.article-main h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.article-content h2 {
+  line-height: 1.25;
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+.article-content blockquote {
+  line-height: 1.25;
+  margin-left: 20px;
+  color: #374151;
+}
+
+.article-content p {
+  line-height: 1.75;
+  margin-bottom: 18px;
+  color: #374151;
+}
+
+.wa-share {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #22c55e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.wa-share i {
+  font-size: 20px;
+}
+
+.wa-share:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(34, 197, 94, 0.35);
+}
+
+.article-sidebar h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.article-sidebar p {
+  font-size: 14px;
+  margin-top: -5px;
+}
+
+.related-card {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: #111827;
+}
+
+.related-card img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.related-card p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .article-body {
+    grid-template-columns: 1fr;
+  }
+  .article-sidebar p {
+    margin-top: 0;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #374151;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb-link:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs .separator {
+  color: #9ca3af;
+}
+
+.breadcrumbs .current {
+  color: #374151;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 280px;
+}

@@ -1,0 +1,442 @@
+.hiw{
+  width: 100%;
+  margin: 14px 0 18px;
+}
+
+.hiw-hero{
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(16,24,40,0.10);
+  box-shadow: 0 14px 40px rgba(16,24,40,0.10);
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hiw-heroOverlay{
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(10,14,18,0.70) 0%, rgba(10,14,18,0.28) 60%, rgba(10,14,18,0.12) 100%),
+    linear-gradient(180deg, rgba(10,14,18,0.18) 0%, rgba(10,14,18,0.62) 100%);
+}
+
+.hiw-heroInner{
+  position: relative;
+  z-index: 1;
+  padding: 18px 18px 16px;
+  color: #fff;
+}
+
+.hiw-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.hiw-head{
+  margin-top: 10px;
+}
+
+.hiw-title{
+  margin: 10px 0 6px;
+  font-size: 1.55rem;
+  letter-spacing: -0.02em;
+  font-weight: 900;
+}
+
+.hiw-subtitle{
+  margin: 0 0 12px;
+  max-width: 68ch;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.55;
+  font-size: 1rem;
+}
+
+.hiw-stepsModern{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.hiw-stepCard{
+  position: relative;
+  border-radius: 18px;
+  padding: 12px 12px 12px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.16);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+  overflow: hidden;
+}
+
+.hiw-stepTop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.hiw-stepNo{
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  background: rgba(127, 224, 138, 0.20);
+  border: 1px solid rgba(127, 224, 138, 0.32);
+}
+
+.hiw-stepIcon{
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+.hiw-stepIcon i{
+  font-size: 18px;
+  line-height: 1;
+}
+
+.hiw-stepTitle{
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+
+.hiw-stepSub{
+  margin-top: 4px;
+  color: rgba(255,255,255,0.82);
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.hiw-stepConnector{
+  position: absolute;
+  top: 50%;
+  right: -14px;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.35);
+}
+
+.hiw-ctaRow{
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hiw-ctaBtn{
+  border: none;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-weight: 900;
+
+  background: #2e7d32;
+  color: #fff;
+
+  box-shadow: 0 14px 30px rgba(46,125,50,0.28);
+  transition: transform .12s ease, filter .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.hiw-ctaBtn:hover{
+  background: #256629;
+  transform: translateY(-1px);
+  filter: brightness(0.99);
+  box-shadow: 0 18px 38px rgba(46,125,50,0.32);
+}
+
+.hiw-miniNote{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.80);
+  font-size: 0.92rem;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
+  padding: 10px 12px;
+  border-radius: 999px;
+}
+
+.hiw-modal{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.hiw-modal-backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.50);
+  border: none;
+  padding: 0;
+}
+
+.hiw-modal-panel{
+  position: relative;
+  z-index: 1;
+  width: min(980px, calc(100% - 16px));
+  height: min(82vh, 720px);
+  background: rgba(255,255,255,0.96);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 90px rgba(0,0,0,0.30);
+  border: 1px solid rgba(16,24,40,0.10);
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.hiw-modal-header{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(16,24,40,0.08);
+}
+
+.hiw-modal-title{
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #111827;
+  letter-spacing: -0.01em;
+}
+
+.hiw-modal-desc{
+  margin: 6px 0 0;
+  font-size: 0.92rem;
+  color: rgba(17,24,39,0.72);
+  line-height: 1.5;
+  max-width: 70ch;
+}
+
+.hiw-modal-close{
+  border: 1px solid rgba(16,24,40,0.10);
+  background: rgba(46,125,50,0.10);
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 900;
+  color: #1f6b2a;
+  white-space: nowrap;
+  transition: transform .12s ease, background .2s ease;
+}
+.hiw-modal-close:hover{
+  background: rgba(46,125,50,0.14);
+  transform: translateY(-1px);
+}
+
+.hiw-modal-body{
+  padding: 16px 18px;
+  overflow: auto;
+  flex: 1;
+}
+
+.hiw-modal-grid{
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 14px;
+}
+
+.hiw-sideCard{
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(16,24,40,0.08);
+  box-shadow: 0 10px 26px rgba(16,24,40,0.06);
+  padding: 14px;
+  height: fit-content;
+}
+
+.hiw-sideTitle{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.hiw-sideList{
+  display: grid;
+  gap: 10px;
+}
+
+.hiw-sideItem{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 10px;
+  border-radius: 14px;
+  background: #f6f7fb;
+  border: 1px solid rgba(16,24,40,0.06);
+}
+
+.hiw-sideIcon{
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(46,125,50,0.10);
+  color: #2e7d32;
+  flex: 0 0 auto;
+}
+
+.hiw-sideText{
+  color: rgba(17,24,39,0.78);
+  line-height: 1.45;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.hiw-sideFooter{
+  margin-top: 10px;
+  color: rgba(17,24,39,0.70);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.hiw-mainFlow{
+  display: grid;
+  gap: 12px;
+}
+
+.hiw-flowCard{
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(16,24,40,0.08);
+  box-shadow: 0 10px 26px rgba(16,24,40,0.06);
+}
+
+.hiw-flowLeft{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.hiw-flowIndex{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  background: rgba(46,125,50,0.12);
+  color: #1f6b2a;
+}
+
+.hiw-flowIcon{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(46,125,50,0.10);
+  color: #2e7d32;
+}
+.hiw-flowIcon i{ font-size: 18px; }
+
+.hiw-flowTitle{
+  font-weight: 900;
+  color: #111827;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+
+.hiw-flowDesc{
+  color: rgba(17,24,39,0.72);
+  line-height: 1.6;
+  font-size: 0.96rem;
+}
+
+.hiw-summary{
+  margin-top: 4px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(46,125,50,0.08);
+  border: 1px solid rgba(46,125,50,0.14);
+  color: rgba(17,24,39,0.80);
+  line-height: 1.6;
+}
+
+.hiw-modal-footer{
+  display: flex;
+  justify-content: flex-end;
+  padding: 14px 18px;
+  border-top: 1px solid rgba(16,24,40,0.08);
+}
+
+.hiw-modal-ok{
+  background: #2e7d32;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 0 12px 26px rgba(46,125,50,0.22);
+  transition: transform .12s ease, filter .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.hiw-modal-ok:hover{
+  background: #256629;
+  transform: translateY(-1px);
+  filter: brightness(0.99);
+  box-shadow: 0 16px 34px rgba(46,125,50,0.26);
+}
+
+@media (max-width: 980px){
+  .hiw-stepsModern{
+    grid-template-columns: 1fr;
+  }
+  .hiw-stepConnector{ display: none; }
+
+  .hiw-modal-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px){
+  .hiw-heroInner{ padding: 16px 14px 14px; }
+  .hiw-title{ font-size: 1.35rem; }
+}

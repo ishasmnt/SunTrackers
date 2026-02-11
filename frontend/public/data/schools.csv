@@ -1,0 +1,31 @@
+school_id,school_name,city,district,address,latitude,longitude,installation_date,installation_cost,panel_capacity_kw,maintenance_frequency,has_solar
+SCH001,SMA Negeri 1 Bandung,Bandung,Coblong,Jl. Ir. H. Juanda No.93,-6.89148,107.6107,2019-06-15,85000000,12.5,quarterly,Yes
+SCH002,SMP Negeri 5 Bandung,Bandung,Antapani,Jl. Terusan Jakarta No.75,-6.91432,107.6541,2020-03-10,62000000,8.0,quarterly,Yes
+SCH003,SD Negeri Sukajadi,Bandung,Sukajadi,Jl. Sukajadi No.181,-6.88321,107.5954,2021-01-20,45000000,5.5,half-yearly,Yes
+SCH004,SMA Negeri 3 Cimahi,Cimahi,Cimahi Tengah,Jl. Pacinan No.22,-6.87214,107.5428,2018-08-05,90000000,14.0,quarterly,Yes
+SCH005,SMP Negeri 2 Cimahi,Cimahi,Cimahi Selatan,Jl. Baros No.40,-6.88976,107.5351,2022-04-18,38000000,4.5,half-yearly,Yes
+SCH006,SD Negeri Cibabat,Cimahi,Cimahi Utara,Jl. Cibabat Raya No.12,-6.86431,107.5589,2023-02-11,30000000,3.5,half-yearly,Yes
+SCH007,SMA Negeri 1 Bekasi,Bekasi,Bekasi Timur,Jl. KH Agus Salim No.181,-6.23451,106.9958,2019-07-01,110000000,16.0,quarterly,Yes
+SCH008,SMP Negeri 4 Bekasi,Bekasi,Bekasi Selatan,Jl. Pahlawan No.88,-6.26744,106.9872,2020-11-09,72000000,9.0,quarterly,Yes
+SCH009,SD Negeri Kayuringin,Bekasi,Bekasi Selatan,Jl. KH Noer Ali No.15,-6.25193,106.9715,2021-06-14,42000000,5.0,half-yearly,Yes
+SCH010,SMA Negeri 2 Depok,Depok,Sukmajaya,Jl. Raya Bogor Km.35,-6.40218,106.8336,2018-05-21,98000000,15.0,quarterly,Yes
+SCH011,SMP Negeri 6 Depok,Depok,Beji,Jl. Margonda Raya No.54,-6.37329,106.8302,2020-02-17,65000000,8.5,quarterly,Yes
+SCH012,SD Negeri Beji 2,Depok,Beji,Jl. Kemiri Muka No.9,-6.37184,106.8231,2022-09-12,34000000,4.0,half-yearly,Yes
+SCH013,SMA Negeri 1 Bogor,Bogor,Bogor Tengah,Jl. Ir. H. Juanda No.16,-6.59674,106.7961,2019-08-10,105000000,15.5,quarterly,Yes
+SCH014,SMP Negeri 3 Bogor,Bogor,Tanah Sareal,Jl. Sholeh Iskandar No.5,-6.56492,106.7875,2021-03-22,58000000,7.5,half-yearly,Yes
+SCH015,SD Negeri Kedung Badak,Bogor,Tanah Sareal,Jl. Kedung Badak Raya,-6.55841,106.7823,2023-01-19,29000000,3.0,half-yearly,Yes
+SCH016,SMA Negeri 1 Sukabumi,Sukabumi,Cikole,Jl. Bhayangkara No.75,-6.91985,106.9267,2018-07-30,87000000,12.0,quarterly,Yes
+SCH017,SMP Negeri 2 Sukabumi,Sukabumi,Warudoyong,Jl. Otista No.33,-6.93371,106.9412,2020-06-08,54000000,6.5,half-yearly,Yes
+SCH018,SD Negeri Benteng,Sukabumi,Baros,Jl. Pelabuhan II No.10,-6.94322,106.9028,2022-10-04,31000000,3.8,half-yearly,Yes
+SCH019,SMA Negeri 1 Cirebon,Cirebon,Kejaksan,Jl. Dr. Wahidin No.77,-6.71533,108.5581,2019-09-12,92000000,13.0,quarterly,Yes
+SCH020,SMP Negeri 7 Cirebon,Cirebon,Harjamukti,Jl. Kalijaga No.12,-6.74218,108.5304,2021-05-26,60000000,7.8,half-yearly,Yes
+SCH021,SD Negeri Sunyaragi,Cirebon,Kesambi,Jl. Sunyaragi No.6,-6.72855,108.5419,2023-03-07,28000000,3.2,half-yearly,Yes
+SCH022,SMA Negeri 1 Garut,Garut,Tarogong Kidul,Jl. Merdeka No.91,-7.21648,107.8992,2018-06-18,83000000,11.5,quarterly,Yes
+SCH023,SMP Negeri 4 Garut,Garut,Garut Kota,Jl. Cimanuk No.45,-7.21073,107.9046,2020-08-14,56000000,7.0,half-yearly,Yes
+SCH024,SD Negeri Pakuwon,Garut,Garut Kota,Jl. Pakuwon No.3,-7.20519,107.9123,2022-11-20,30000000,3.5,half-yearly,Yes
+SCH025,SMA Negeri 1 Tasikmalaya,Tasikmalaya,Cihideung,Jl. R.E. Martadinata No.85,-7.32741,108.2197,2019-07-05,90000000,13.5,quarterly,Yes
+SCH026,SMP Negeri 5 Tasikmalaya,Tasikmalaya,Tawang,Jl. Letnan Harun No.22,-7.33652,108.2134,2021-04-16,59000000,7.2,half-yearly,Yes
+SCH027,SD Negeri Tugujaya,Tasikmalaya,Indihiang,Jl. Tugujaya No.8,-7.35314,108.1981,2023-02-02,27000000,3.0,half-yearly,Yes
+SCH028,SMA Negeri 1 Sumedang,Sumedang,Sumedang Utara,Jl. Prabu Gajah Agung No.12,-6.85742,107.9206,2018-08-22,88000000,12.0,quarterly,Yes
+SCH029,SMP Negeri 3 Sumedang,Sumedang,Sumedang Selatan,Jl. Raya Tanjungsari,-6.86931,107.9142,2020-09-11,57000000,7.5,half-yearly,Yes
+SCH030,SD Negeri Kotakulon,Sumedang,Sumedang Utara,Jl. Kotakulon No.5,-6.85018,107.9274,2022-12-15,31000000,3.8,half-yearly,Yes

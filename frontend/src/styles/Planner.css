@@ -1,0 +1,700 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+.plannerShell{
+  width: 100%;
+  min-height: 100vh;
+  background: #f4fbf4;
+  padding: 22px 14px 40px;
+  overflow-x: hidden;
+}
+
+.plannerTwoCol{
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.plannerLeft, .plannerRight{ min-width: 0; }
+
+.leftHeader{
+  margin: 6px 0 14px;
+}
+
+.leftTitle{
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 900;
+  color: #182418;
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.leftTitle i{ color: #2e7d32; }
+
+.leftSubtitle{
+  margin: 0;
+  color: #546354;
+  font-size: 13.5px;
+  line-height: 1.5;
+  max-width: 50ch;
+}
+
+.rightHeader{
+  margin: 10px 0 14px;
+}
+
+.rightTitle{
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+  color: #182418;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rightTitle i{ color: #2e7d32; }
+
+.plannerCard{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.07);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.08);
+  width: 100%;
+  min-width: 0;
+}
+
+.plannerFormCard{
+  padding: 16px;
+}
+
+.plannerLabel{
+  display: block;
+  margin: 10px 0 7px;
+  font-weight: 700;
+  font-size: 13px;
+  color: #1f2a1f;
+}
+
+.plannerHint{
+  margin-left: 6px;
+  color: #2e7d32;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.plannerInput,
+.plannerSelect{
+  width: 100%;
+  border: 1px solid rgba(0,0,0,.16);
+  border-radius: 12px;
+  padding: 11px 12px;
+  font-size: 15px;
+  outline: none;
+  background: #fff;
+  color: #1f2a1f;
+}
+
+.plannerSelect{
+  max-width: 100%;
+  width: 100%;
+}
+
+.plannerInput:focus,
+.plannerSelect:focus{
+  border-color: rgba(46,125,50,.7);
+  box-shadow: 0 0 0 4px rgba(46,125,50,.12);
+}
+
+.plannerRange{
+  width: 100%;
+  height: 34px;
+  border-radius: 12px;
+}
+
+.plannerFormGrid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 12px;
+  margin-top: 6px;
+}
+
+.plannerBtn{
+  width: 100%;
+  margin: 14px 0 0;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-weight: 800;
+  background: #2e7d32;
+  color: #fff;
+  cursor: pointer;
+  transition: transform .06s ease, filter .2s ease, opacity .2s ease;
+}
+
+.plannerBtn:hover{ filter: brightness(.98); }
+.plannerBtn:active{ transform: scale(.99); }
+.plannerBtn:disabled{ opacity: .65; cursor: not-allowed; }
+
+.plannerMiniPreview{
+  margin-top: 12px;
+  border: 1px dashed rgba(46,125,50,.35);
+  background: rgba(232,245,233,.55);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.plannerMiniRow{
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12.5px;
+  color: #2b2b2b;
+}
+
+.rightStack{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.plannerMetricsGrid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.metricCard{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.07);
+  border-radius: 16px;
+  padding: 14px 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  min-width: 0;
+}
+
+.metricIcon{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(46,125,50,.10);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 10px;
+  color: #2e7d32;
+}
+
+.metricLabel{
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #4e5d4e;
+  margin-bottom: 6px;
+}
+
+.metricValue{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 950;
+  color: #182418;
+  overflow-wrap: anywhere;
+}
+
+.metricSub{
+  text-align: center;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #586858;
+}
+
+.metricCost .metricIcon{ background: rgba(211,47,47,.10); color: #d32f2f; }
+.metricCost .metricValue{ color: #c62828; }
+
+.metricSave .metricIcon{ background: rgba(46,125,50,.12); color: #2e7d32; }
+.metricSave .metricValue{ color: #2e7d32; }
+
+.leftNoteCard{
+  margin-top: 14px;
+  background: #eef5ff;
+  border: 1px solid rgba(33,150,243,.20);
+}
+
+.leftNoteCard .noteHead i{
+  background: rgba(33,150,243,.12);
+  color: #1e88e5;
+}
+
+.noteHead{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1f2a1f;
+  font-weight: 900;
+}
+
+.noteHead i{
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(33,150,243,.12);
+  display: grid;
+  place-items: center;
+  color: #1e88e5;
+}
+
+.noteTitle{ font-size: 14px; }
+
+.noteBody{
+  margin-top: 10px;
+  color: #2b2b2b;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.breakdownCard{
+  background: #fff;
+}
+
+.breakdownTitle{
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 950;
+  color: #182418;
+}
+
+.breakdownText{
+  margin: 0 0 12px;
+  color: #2b2b2b;
+  line-height: 1.6;
+  font-size: 13px;
+}
+
+.breakdownGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.breakdownBox{
+  background: rgba(244,251,244,.8);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.breakdownBoxTitle{
+  font-weight: 950;
+  color: #1f2a1f;
+  margin-bottom: 6px;
+}
+
+.breakdownBoxValue{
+  font-weight: 950;
+  color: #2e7d32;
+  font-size: 16px;
+}
+
+.breakdownBoxSub{
+  margin-top: 8px;
+  font-size: 12px;
+  color: #516151;
+  line-height: 1.5;
+}
+
+.breakdownSection{
+  margin-top: 12px;
+}
+
+.breakdownSectionTitle{
+  font-weight: 950;
+  color: #1f2a1f;
+  margin-bottom: 8px;
+}
+
+.breakdownList{
+  margin: 0;
+  padding-left: 18px;
+  color: #2b2b2b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.breakdownList li{
+  margin: 6px 0;
+}
+
+.emptyState{
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(232,245,233,.7), #fff);
+}
+
+.emptyIcon{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(46,125,50,.12);
+  display: grid;
+  place-items: center;
+  color: #2e7d32;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.emptyTitle{
+  font-weight: 950;
+  font-size: 16px;
+  color: #182418;
+}
+
+.emptyText{
+  margin-top: 6px;
+  font-size: 13px;
+  color: #516151;
+  line-height: 1.6;
+  max-width: 70ch;
+}
+
+.emptyTips{
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.tipRow{
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: #2b2b2b;
+  font-size: 13px;
+}
+
+.tipRow i{
+  color: #2e7d32;
+  margin-top: 2px;
+}
+
+.uiModalOverlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 16, 10, 0.45);
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  z-index: 9999;
+}
+
+.uiModal{
+  width: min(520px, 100%);
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  padding: 16px;
+}
+
+.uiModalHead{
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.uiModalIcon{
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: rgba(255,193,7,.18);
+  display: grid;
+  place-items: center;
+  color: #b8860b;
+  flex: 0 0 auto;
+}
+
+.uiModalTitleWrap{ min-width: 0; }
+
+.uiModalTitle{
+  font-weight: 950;
+  color: #182418;
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.uiModalMsg{
+  margin-top: 6px;
+  color: #516151;
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.uiModalActions{
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.uiModalBtn{
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 900;
+  background: #2e7d32;
+  color: #fff;
+  cursor: pointer;
+}
+
+.uiModalBtn:hover{ filter: brightness(.98); }
+.uiModalBtn:active{ transform: scale(.99); }
+
+.uiSelect{
+  position: relative;
+  width: 100%;
+}
+
+.uiSelectBtn{
+  width: 100%;
+  border: 1px solid rgba(0,0,0,.16);
+  border-radius: 12px;
+  padding: 11px 12px;
+  background: #fff;
+  color: #1f2a1f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.uiSelectBtn:focus{
+  outline: none;
+  border-color: rgba(46,125,50,.7);
+  box-shadow: 0 0 0 4px rgba(46,125,50,.12);
+}
+
+.uiSelectVal{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.uiSelectBackdrop{
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+}
+
+.uiSelectMenu{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 8px);
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 14px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.18);
+  padding: 6px;
+  z-index: 9999;
+}
+
+.uiSelectItem{
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  color: #182418;
+}
+
+.uiSelectItem:hover{
+  background: rgba(46,125,50,.08);
+}
+
+.uiSelectItem.isActive{
+  background: rgba(46,125,50,.12);
+  color: #2e7d32;
+}
+
+.plannerIntroNote {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.plannerIntroNote i {
+  margin-top: 2px;
+  color: #2563eb;
+  font-size: 1rem;
+}
+
+.plannerIntroNote p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.labelWithHelp{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.metricLabel.labelWithHelp{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.helpTipWrap{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.helpTipBtn{
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: rgba(24, 36, 24, 0.55);
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.helpTipBtn:hover{
+  color: rgba(24, 36, 24, 0.85);
+}
+
+.helpTipBtn i{
+  font-size: 14px;
+}
+
+.helpTipBubble{
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: max-content;
+  max-width: 280px;
+  background: #182418;
+  color: #fff;
+  border-radius: 12px;
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 1.45;
+  font-weight: 600;
+  box-shadow: 0 16px 40px rgba(0,0,0,.22);
+  z-index: 10001;
+}
+
+.helpTipBubble::before{
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  background: #182418;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
+.metricCard .helpTipBubble{
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.metricCard .helpTipBubble::before{
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+@media (max-width: 560px){
+  .helpTipBubble{
+    left: auto;
+    right: 0;
+    max-width: min(280px, 80vw);
+  }
+
+  .helpTipBubble::before{
+    left: auto;
+    right: 12px;
+  }
+
+  .metricCard .helpTipBubble{
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    max-width: min(280px, 84vw);
+  }
+
+  .metricCard .helpTipBubble::before{
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+@media (max-width: 1080px){
+  .plannerTwoCol{
+    grid-template-columns: 420px 1fr;
+  }
+  .plannerMetricsGrid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px){
+  .plannerTwoCol{
+    grid-template-columns: 1fr;
+  }
+  .rightHeader{ 
+    margin-top: 18px; 
+  }
+  .plannerMetricsGrid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px){
+  .plannerShell{ 
+    padding: 16px 10px 28px;
+    overflow-x: hidden;
+  }
+  .plannerFormGrid{ 
+    grid-template-columns: 1fr; 
+  }
+  .plannerMetricsGrid{ 
+    grid-template-columns: 1fr; 
+  }
+  .breakdownGrid{ 
+    grid-template-columns: 1fr; 
+  }
+  .plannerTwoCol, .plannerCard{ 
+    overflow: hidden; 
+  }
+  select.plannerSelect{
+    font-size: 16px;
+  }
+}

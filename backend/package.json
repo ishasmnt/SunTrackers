@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "npm install"
+  },
+  "keywords": [
+    "solar",
+    "west-java",
+    "energy-democracy"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "Backend for West Java Solar Impact Portal - Competition Build",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "groq": "^3.99.0",
+    "groq-sdk": "^0.37.0",
+    "mongoose": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
