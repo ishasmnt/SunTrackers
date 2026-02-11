@@ -23,16 +23,34 @@ const PORT = process.env.PORT || 5001;
 // CORS CONFIGURATION
 // =====================
 // Explicitly allowing your Firebase domains and Localhost
+// =====================
+// CORS CONFIGURATION
+// =====================
 app.use(cors({
-    origin: [
-        "https://suntrackers-9171b.web.app",
-        "https://suntrackers-9171b.firebaseapp.com",
-        "http://localhost:5173",
-       "https://sun-trackers-8adx.vercel.app",
-    ],
+    origin: function (origin, callback) {
+        if (!origin) return callback(null, true);
+
+        // Allow localhost
+        if (origin.includes("localhost")) {
+            return callback(null, true);
+        }
+
+        // Allow all Vercel deployments
+        if (origin.includes("vercel.app")) {
+            return callback(null, true);
+        }
+
+        // Allow Firebase domains
+        if (origin.includes("firebaseapp.com") || origin.includes("web.app")) {
+            return callback(null, true);
+        }
+
+        callback(new Error("Not allowed by CORS"));
+    },
     methods: ["GET", "POST"],
     credentials: true
 }));
+
 
 app.use(bodyParser.json());
 
