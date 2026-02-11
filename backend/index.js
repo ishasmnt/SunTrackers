@@ -28,7 +28,7 @@ app.use(cors({
         "https://suntrackers-9171b.web.app",
         "https://suntrackers-9171b.firebaseapp.com",
         "http://localhost:5173",
-        "https://sun-trackers-7cbv.vercel.app",
+       "https://sun-trackers-8adx.vercel.app",
     ],
     methods: ["GET", "POST"],
     credentials: true
